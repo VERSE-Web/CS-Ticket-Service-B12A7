@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+body{
+  background: #F5F5F5;
+  margin: 0%;
+  padding: 0%;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+}
+
+.header {
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: wrap-around;
+  background-color: #FFFFFF;
+}
+
+.inlinetspls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  margin: 5px;
+
+}
+
+.new-ticket-button {
+  height: 43px;
+  width: 145px;
+  background: linear-gradient(90deg, #6731E4, #864CEC, #9F62F2);
+  border-radius: 4px;
+  border: none;
+  color: White;
+}
+.IDKjustneedit {
+  margin: 5px;
+}
