@@ -1,0 +1,11 @@
+.ticketsHolders {
+        inline-size: default;
+}
+
+.ticketContainer {
+    height: 148px;
+    width: 513px;
+    background-color: #FFFFFF;
+    border: 5px solid #FFFFFF;
+    border-radius: 8px;
+}

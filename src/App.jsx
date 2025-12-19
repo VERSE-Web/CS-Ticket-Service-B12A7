@@ -12,8 +12,7 @@ function App() {
       <Header />
       <Maincard />
       <Suspense fallback={<p>Did you know 'GUTS - Olivia Rodrigo' was Originally made in 2023</p>}>
-        <Tickets 
-
+        <Tickets
         ticketsPromise={ticketsPromise} />
       </Suspense>
     </>
