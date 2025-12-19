@@ -16,7 +16,14 @@ const Tickets = ({ ticketsPromise }) => {
               <h4>{t["#0001"].description}</h4>
             </div>
             <div className='lowest-rank'>
-              
+              <div className='LR-left'>
+                <h5>{t["#0001"].id}</h5>
+                <h5>{t["#0001"].status}</h5>
+              </div>
+              <div>
+                <h5>{t["#0001"].customer}</h5>
+                <h5>{t["#0001"].createdAt}</h5>
+              </div>
             </div>
           </div>
       </div>
