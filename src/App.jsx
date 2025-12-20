@@ -15,6 +15,7 @@ function App() {
         <Tickets
         ticketsPromise={ticketsPromise} />
       </Suspense>
+
     </>
   )
 }

@@ -1,3 +1,5 @@
+// Everything is labeled because of my Own sanity...  
+
 import React, { use } from 'react';
 import './tickets.css';
 
@@ -8,7 +10,10 @@ const Tickets = ({ ticketsPromise }) => {
   return (
     <div className='timBradford'>
       <div className='ticketsHolders'>
-
+        <div className='lucyChen'>
+          <h1>Customer Tickets</h1>
+        </div>
+        <br/>
         {/* 1 (0001) */}
         <div className='ticketContainer'>
           <div className='top-rank'>
@@ -218,6 +223,10 @@ const Tickets = ({ ticketsPromise }) => {
             </div>
           </div>
         </div>
+      </div>
+      {/* THE COMPLETE SECTION */}
+      <div className='Stan-Smitty'>
+
       </div>
     </div>
   );
