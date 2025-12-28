@@ -10,8 +10,9 @@ function App() {
   return (
     <>
       <Header />
+      <br/>
       <Maincard />
-      <Suspense fallback={<p>Did you know 'GUTS - Olivia Rodrigo' was Originally made in 2023</p>}>
+      <Suspense fallback={<p>HARDSTONE PSYCHO - Don Toliver is my Fav Hip-Hop Album GUTS(Spilled) is my Fav Pop Album.</p>}>
         <Tickets
         ticketsPromise={ticketsPromise} />
       </Suspense>
