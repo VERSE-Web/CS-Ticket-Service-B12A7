@@ -232,8 +232,8 @@ const Tickets = ({ ticketsPromise }) => {
            <h3>
             {t['#0001'].title}
            </h3>
-           <button style={{ backgroundColor: '#02A53B', width: '326px', height: '43px', border: '0px'}}>
-
+           <button style={{ backgroundColor: '#02A53B', width: '326px', height: '43px', border: '0px', color: 'white'}}>
+              Complete
            </button>
         </div>
       </div>
