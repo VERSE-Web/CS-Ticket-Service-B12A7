@@ -6,6 +6,8 @@ import './tickets.css';
 const Tickets = ({ ticketsPromise }) => {
   const data = use(ticketsPromise);
   const t = data.tickets;
+  const hidden = 'none'
+  const show = 'block'
 
   return (
     <div className='timBradford'>
@@ -226,7 +228,14 @@ const Tickets = ({ ticketsPromise }) => {
       </div>
       {/* THE COMPLETE SECTION */}
       <div className='Stan-Smitty'>
+        <div>
+           <h3>
+            {t['#0001'].title}
+           </h3>
+           <button style={{ backgroundColor: '#02A53B', width: '326px', height: '43px', border: '0px'}}>
 
+           </button>
+        </div>
       </div>
     </div>
   );
