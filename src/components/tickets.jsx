@@ -228,9 +228,65 @@ const Tickets = ({ ticketsPromise }) => {
       </div>
       {/* THE COMPLETE SECTION */}
       <div className='Stan-Smitty'>
-        <div>
+        <div style={{display: show, backgroundColor: '#FFFFFF', borderRadius: '4px'}}>
            <h3>
             {t['#0001'].title}
+           </h3>
+           <button style={{ backgroundColor: '#02A53B', width: '326px', height: '43px', border: '0px', color: 'white'}}>
+              Complete
+           </button>
+        </div>
+        <div style={{display: show, backgroundColor: '#FFFFFF', borderRadius: '4px'}}>
+           <h3>
+            {t['#0010'].title}
+           </h3>
+           <button style={{ backgroundColor: '#02A53B', width: '326px', height: '43px', border: '0px', color: 'white'}}>
+              Complete
+           </button>
+        </div>
+        <div style={{display: show, backgroundColor: '#FFFFFF', borderRadius: '4px'}}>
+           <h3>
+            {t['#0011'].title}
+           </h3>
+           <button style={{ backgroundColor: '#02A53B', width: '326px', height: '43px', border: '0px', color: 'white'}}>
+              Complete
+           </button>
+        </div>
+        <div style={{display: show, backgroundColor: '#FFFFFF', borderRadius: '4px'}}>
+           <h3>
+            {t['#0100'].title}
+           </h3>
+           <button style={{ backgroundColor: '#02A53B', width: '326px', height: '43px', border: '0px', color: 'white'}}>
+              Complete
+           </button>
+        </div>
+        <div style={{display: show, backgroundColor: '#FFFFFF', borderRadius: '4px'}}>
+           <h3>
+            {t['#0101'].title}
+           </h3>
+           <button style={{ backgroundColor: '#02A53B', width: '326px', height: '43px', border: '0px', color: 'white'}}>
+              Complete
+           </button>
+        </div>
+        <div style={{display: show, backgroundColor: '#FFFFFF', borderRadius: '4px'}}>
+           <h3>
+            {t['#0110'].title}
+           </h3>
+           <button style={{ backgroundColor: '#02A53B', width: '326px', height: '43px', border: '0px', color: 'white'}}>
+              Complete
+           </button>
+        </div>
+        <div style={{display: show, backgroundColor: '#FFFFFF', borderRadius: '4px'}}>
+           <h3>
+            {t['#0111'].title}
+           </h3>
+           <button style={{ backgroundColor: '#02A53B', width: '326px', height: '43px', border: '0px', color: 'white'}}>
+              Complete
+           </button>
+        </div>
+        <div style={{display: show, backgroundColor: '#FFFFFF', borderRadius: '4px'}}>
+           <h3>
+            {t['#1000'].title}
            </h3>
            <button style={{ backgroundColor: '#02A53B', width: '326px', height: '43px', border: '0px', color: 'white'}}>
               Complete
