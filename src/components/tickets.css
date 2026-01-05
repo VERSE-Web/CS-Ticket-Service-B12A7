@@ -1,3 +1,9 @@
+.timBradford {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  
+}
+
 .ticketsHolders {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

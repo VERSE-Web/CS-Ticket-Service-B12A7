@@ -229,12 +229,14 @@ const Tickets = ({ ticketsPromise }) => {
       {/* THE COMPLETE SECTION */}
       <div className='Stan-Smitty'>
         <div style={{display: show, backgroundColor: '#FFFFFF', borderRadius: '4px', width: '358px', height: '113px'}}>
-           <h3>
-            {t['#0001'].title}
-           </h3>
-           <button style={{ backgroundColor: '#02A53B', width: '326px', height: '43px', border: '0px', color: 'white'}}>
+          <div style={{textAlign: 'center', gap: '5px'}}>
+            <h3 style={{}}>
+              {t['#0001'].title}
+            </h3>
+            <button style={{ backgroundColor: '#02A53B', width: '326px', height: '43px', border: '0px', color: 'white'}}>
               Complete
-           </button>
+            </button>
+          </div>
         </div>
       </div>
     </div>
