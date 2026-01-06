@@ -1,7 +1,6 @@
 .timBradford {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  
 }
 
 .ticketsHolders {
@@ -94,5 +93,6 @@ h6 {
 }
 
 .Stan-Smitty{
-  
+  margin-left: 150px;
+  margin-top: 15%;
 }

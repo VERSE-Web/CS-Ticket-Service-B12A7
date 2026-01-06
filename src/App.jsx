@@ -66,7 +66,7 @@ function Maincard() {
         </div>
         <div>
             <h3>In-Progress</h3>
-            <h1><span>0</span></h1>
+            <h1><span id='inProgressSpan'>0</span></h1>
         </div>
         <div className="Image-1">
             <img src={vector1} alt=""/>
@@ -77,8 +77,8 @@ function Maincard() {
           <img src={vector1} alt=""/>
         </div>
         <div>
-            <h3>In-Progress</h3>
-            <h1><span>0</span></h1>
+            <h3>Completed</h3>
+            <h1><span id='CompletedSpan'>0</span></h1>
         </div>
         <div className="Image-1">
             <img src={vector1} alt=""/>

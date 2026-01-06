@@ -1,13 +1,22 @@
 // Everything is labeled because of my Own sanity...  
 
-import React, { use } from 'react';
+import React, { use, useState } from 'react';
 import './tickets.css';
 
 const Tickets = ({ ticketsPromise }) => {
+
   const data = use(ticketsPromise);
+  
   const t = data.tickets;
-  const hidden = 'none'
-  const show = 'block'
+  
+  const [activeTicket, setActiveTicket] = useState();
+
+
+  const showOne = () => setActiveTicket("COne");
+  const showTwo = () => setActiveTicket("CTwo");
+
+
+
 
   return (
     <div className='timBradford'>
@@ -17,7 +26,7 @@ const Tickets = ({ ticketsPromise }) => {
         </div>
         <br/>
         {/* 1 (0001) */}
-        <div className='ticketContainer'>
+        <div className='ticketContainer' onClick={showOne}>
           <div className='top-rank'>
             <h3>{t["#0001"].title}</h3>
             <h4 className='G-status'>{t["#0001"].status}</h4>
@@ -38,7 +47,7 @@ const Tickets = ({ ticketsPromise }) => {
         </div>
 
         {/* 2 (0010) */}
-        <div className='ticketContainer'>
+        <div className='ticketContainer' onClick={showTwo}>
           <div className='top-rank'>
             <h3>{t["#0010"].title}</h3>
             <h4 className='Y-status'>{t["#0010"].status}</h4>
@@ -176,7 +185,7 @@ const Tickets = ({ ticketsPromise }) => {
             <div className='LR-left'>
               <h6 className='grey'>#{t["#1000"].id}</h6>
               <h6 className='Y-priority'>{t["#1000"].priority}</h6>
-            </div>
+            </div>  
             <div className='LR-right'>
               <h6 className='grey'>{t["#1000"].customer}</h6>
               <h6 className='grey'>{t["#1000"].createdAt}</h6>
@@ -228,15 +237,41 @@ const Tickets = ({ ticketsPromise }) => {
       </div>
       {/* THE COMPLETE SECTION */}
       <div className='Stan-Smitty'>
-        <div style={{display: show, backgroundColor: '#FFFFFF', borderRadius: '4px', width: '358px', height: '113px'}}>
-          <div style={{textAlign: 'center', gap: '5px'}}>
-            <h3 style={{}}>
-              {t['#0001'].title}
-            </h3>
-            <button style={{ backgroundColor: '#02A53B', width: '326px', height: '43px', border: '0px', color: 'white'}}>
-              Complete
-            </button>
+        <div>
+          <div style={{display: 'flex', alignItems: 'center', gap: '8px', fontSize: '24px', fontWeight: '2px', color: '#34485A'}}>
+            <h1>
+              Task status
+              </h1>
+            <span>
+              (One at a time.)
+              </span>
+            </div>
+            <div style={{display: activeTicket === "COne" ? "block" : "none", backgroundColor: '#FFFFFF', borderRadius: '8px', width: '358px', height: '113px', border: '5px solid #ffffff'}} id='COne'>
+            <div style={{textAlign: 'center', gap: '5px'}}>
+              <h3 style={{}}>
+                {t['#0001'].title}
+              </h3>
+              <button style={{ backgroundColor: '#02A53B', width: '326px', height: '43px', border: '0px', color: 'white'}}>
+                Complete
+              </button>
+            </div>
           </div>
+          {/* 2nd */}
+          <div style={{display: activeTicket === "CTwo" ? "block" : "none", backgroundColor: '#FFFFFF', borderRadius: '8px', width: '358px', height: '113px', border: '5px solid #ffffff'}} id='CTwo'>
+            <div style={{textAlign: 'center', gap: '5px'}}>
+              <h3 style={{}}>
+                {t['#0010'].title}
+              </h3>
+              <button style={{ backgroundColor: '#02A53B', width: '326px', height: '43px', border: '0px', color: 'white'}}>
+                Complete
+              </button>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h1 style={{fontSize: '24px', fontWeight: '2px', color: '#34485A'}}>
+            Completed Tasks
+          </h1>
         </div>
       </div>
     </div>
@@ -245,4 +280,10 @@ const Tickets = ({ ticketsPromise }) => {
 
 export default Tickets;
 
-// again 😭
+// again 😭 
+  
+
+
+
+
+
