@@ -2,6 +2,7 @@
 
 import React, { use, useState } from 'react';
 import './tickets.css';
+import vector1 from "./../assets/vector1.png";
 
 const Tickets = ({ ticketsPromise }) => {
 
@@ -9,16 +10,54 @@ const Tickets = ({ ticketsPromise }) => {
   
   const t = data.tickets;
   
+  const [inProgress, setInProgress] = useState(0);
+  const [completed, setCompleted] = useState(0);
+
   const [activeTicket, setActiveTicket] = useState();
 
 
-  const showOne = () => setActiveTicket("COne");
-  const showTwo = () => setActiveTicket("CTwo");
-
-
-
+  const showOne = () => {{setActiveTicket("COne"), setInProgress(inProgress +1)}};
+  const showTwo = () => {setActiveTicket("CTwo"), setInProgress(inProgress + 1)};
+  const showThree = () => {setActiveTicket("CThree"), setInProgress(inProgress + 1)};
+  const showFour = () => {setActiveTicket("CFour"), setInProgress(inProgress + 1)};
+  const showFive = () => {setActiveTicket("CFive"), setInProgress(inProgress + 1)};
+  const showSix = () => {setActiveTicket("CSix"), setInProgress(inProgress + 1)};
+  const showSeven = () => {setActiveTicket("CSeven"), setInProgress(inProgress + 1)};
+  const showEight = () => {setActiveTicket("CEight"), setInProgress(inProgress + 1)};
+  const showNine = () => {setActiveTicket("CNine"), setInProgress(inProgress + 1)};
+  const showTen = () => {setActiveTicket("CTen"), setInProgress(inProgress + 1)};
 
   return (
+    <div>
+      {/* Maincard */} 
+      <div className="Container1">
+      <div className="Main-div1">
+        <div>
+          <img src={vector1} alt="" />
+        </div>
+        <div>
+          <h3>In-Progress</h3>
+          <h1>{inProgress}</h1>
+        </div>
+        <div className="Image-1">
+          <img src={vector1} alt="" />
+        </div>
+      </div>
+
+      <div className="Main-div2">
+        <div>
+          <img src={vector1} alt="" />
+        </div>
+        <div>
+          <h3>Completed</h3>
+          <h1>{completed}</h1>
+        </div>
+        <div className="Image-1">
+          <img src={vector1} alt="" />
+        </div>
+      </div>
+    </div>
+    <br/>
     <div className='timBradford'>
       <div className='ticketsHolders'>
         <div className='lucyChen'>
@@ -68,7 +107,7 @@ const Tickets = ({ ticketsPromise }) => {
         </div>
 
         {/* 3 (0011) */}
-        <div className='ticketContainer'>
+        <div className='ticketContainer' onClick={showThree}>
           <div className='top-rank'>
             <h3>{t["#0011"].title}</h3>
             <h4 className='G-status'>{t["#0011"].status}</h4>
@@ -89,7 +128,7 @@ const Tickets = ({ ticketsPromise }) => {
         </div>
 
         {/* 4 (0100) */}
-        <div className='ticketContainer'>
+        <div className='ticketContainer' onClick={showFour}>
           <div className='top-rank'>
             <h3>{t["#0100"].title}</h3>
             <h4 className='G-status'>{t["#0100"].status}</h4>
@@ -110,7 +149,7 @@ const Tickets = ({ ticketsPromise }) => {
         </div>
 
         {/* 5 (0101) */}
-        <div className='ticketContainer'>
+        <div className='ticketContainer' onClick={showFive}>
           <div className='top-rank'>
             <h3>{t["#0101"].title}</h3>
             <h4 className='Y-status'>{t["#0101"].status}</h4>
@@ -131,7 +170,7 @@ const Tickets = ({ ticketsPromise }) => {
         </div>
 
         {/* 6 (0110) */}
-        <div className='ticketContainer'>
+        <div className='ticketContainer' onClick={showSix}>
           <div className='top-rank'>
             <h3>{t["#0110"].title}</h3>
             <h4 className='G-status'>{t["#0110"].status}</h4>
@@ -152,7 +191,7 @@ const Tickets = ({ ticketsPromise }) => {
         </div>
 
         {/* 7 (0111) */}
-        <div className='ticketContainer'>
+        <div className='ticketContainer' onClick={showSeven}>
           <div className='top-rank'>
             <h3>{t["#0111"].title}</h3>
             <h4 className='Y-status'>{t["#0111"].status}</h4>
@@ -173,7 +212,7 @@ const Tickets = ({ ticketsPromise }) => {
         </div>
 
         {/* 8 (1000) */}
-        <div className='ticketContainer'>
+        <div className='ticketContainer' onClick={showEight}>
           <div className='top-rank'>
             <h3>{t["#1000"].title}</h3>
             <h4 className='G-status'>{t["#1000"].status}</h4>
@@ -194,7 +233,7 @@ const Tickets = ({ ticketsPromise }) => {
         </div>
 
         {/* 9 (1001) */}
-        <div className='ticketContainer'>
+        <div className='ticketContainer' onClick={showNine}>
           <div className='top-rank'>
             <h3>{t["#1001"].title}</h3>
             <h4 className='G-status'>{t["#1001"].status}</h4>
@@ -215,7 +254,7 @@ const Tickets = ({ ticketsPromise }) => {
         </div>
 
         {/* 10 (1010) */}
-        <div className='ticketContainer'>
+        <div className='ticketContainer' onClick={showTen}>
           <div className='top-rank'>
             <h3>{t["#1010"].title}</h3>
             <h4 className='G-status'>{t["#1010"].status}</h4>
@@ -238,11 +277,11 @@ const Tickets = ({ ticketsPromise }) => {
       {/* THE COMPLETE SECTION */}
       <div className='Stan-Smitty'>
         <div>
-          <div style={{display: 'flex', alignItems: 'center', gap: '8px', fontSize: '24px', fontWeight: '2px', color: '#34485A'}}>
-            <h1>
+          <div style={{display: 'flex', alignItems: 'center', gap: '8px'}}>
+            <h1 style={{fontSize: '24px', fontWeight: '2px', color: '#34485A'}}>
               Task status
               </h1>
-            <span>
+            <span style={{fontSize: '15px', fontWeight: '2px', color: '#34485A'}}>
               (One at a time.)
               </span>
             </div>
@@ -268,22 +307,108 @@ const Tickets = ({ ticketsPromise }) => {
             </div>
           </div>
         </div>
-        <div>
+        {/* 3rd */}
+        <div style={{display: activeTicket === "CThree" ? "block" : "none", backgroundColor: '#FFFFFF', borderRadius: '8px', width: '358px', height: '113px', border: '5px solid #ffffff'}} id='CTwo'>
+            <div style={{textAlign: 'center', gap: '5px'}}>
+              <h3 style={{}}>
+                {t['#0011'].title}
+              </h3>
+              <button style={{ backgroundColor: '#02A53B', width: '326px', height: '43px', border: '0px', color: 'white'}}>
+                Complete
+              </button>
+            </div>
+          </div>
+          {/* 4th */}
+          <div style={{display: activeTicket === "CFour" ? "block" : "none", backgroundColor: '#FFFFFF', borderRadius: '8px', width: '358px', height: '113px', border: '5px solid #ffffff'}} id='CTwo'>
+            <div style={{textAlign: 'center', gap: '5px'}}>
+              <h3 style={{}}>
+                {t['#0100'].title}
+              </h3>
+              <button style={{ backgroundColor: '#02A53B', width: '326px', height: '43px', border: '0px', color: 'white'}}>
+                Complete
+              </button>
+            </div>
+          </div>
+          {/* 5th */}
+          <div style={{display: activeTicket === "CFive" ? "block" : "none", backgroundColor: '#FFFFFF', borderRadius: '8px', width: '358px', height: '113px', border: '5px solid #ffffff'}} id='CTwo'>
+            <div style={{textAlign: 'center', gap: '5px'}}>
+              <h3 style={{}}>
+                {t['#0101'].title}
+              </h3>
+              <button style={{ backgroundColor: '#02A53B', width: '326px', height: '43px', border: '0px', color: 'white'}}>
+                Complete
+              </button>
+            </div>
+          </div>
+          {/* 6th */}
+          <div style={{display: activeTicket === "CSix" ? "block" : "none", backgroundColor: '#FFFFFF', borderRadius: '8px', width: '358px', height: '113px', border: '5px solid #ffffff'}} id='CTwo'>
+            <div style={{textAlign: 'center', gap: '5px'}}>
+              <h3 style={{}}>
+                {t['#0110'].title}
+              </h3>
+              <button style={{ backgroundColor: '#02A53B', width: '326px', height: '43px', border: '0px', color: 'white'}}>
+                Complete
+              </button>
+            </div>
+          </div>
+          {/* 7th */}
+          <div style={{display: activeTicket === "CSeven" ? "block" : "none", backgroundColor: '#FFFFFF', borderRadius: '8px', width: '358px', height: '113px', border: '5px solid #ffffff'}} id='CTwo'>
+            <div style={{textAlign: 'center', gap: '5px'}}>
+              <h3 style={{}}>
+                {t['#0111'].title}
+              </h3>
+              <button style={{ backgroundColor: '#02A53B', width: '326px', height: '43px', border: '0px', color: 'white'}}>
+                Complete
+              </button>
+            </div>
+          </div>
+          {/* Eight */}
+          <div style={{display: activeTicket === "CEight" ? "block" : "none", backgroundColor: '#FFFFFF', borderRadius: '8px', width: '358px', height: '113px', border: '5px solid #ffffff'}} id='CTwo'>
+            <div style={{textAlign: 'center', gap: '5px'}}>
+              <h3 style={{}}>
+                {t['#1000'].title}
+              </h3>
+              <button style={{ backgroundColor: '#02A53B', width: '326px', height: '43px', border: '0px', color: 'white'}}>
+                Complete
+              </button>
+            </div>
+          </div>
+          {/* Nine */}
+          <div style={{display: activeTicket === "CNine" ? "block" : "none", backgroundColor: '#FFFFFF', borderRadius: '8px', width: '358px', height: '113px', border: '5px solid #ffffff'}} id='CTwo'>
+            <div style={{textAlign: 'center', gap: '5px'}}>
+              <h3 style={{}}>
+                {t['#1001'].title}
+              </h3>
+              <button style={{ backgroundColor: '#02A53B', width: '326px', height: '43px', border: '0px', color: 'white'}}>
+                Complete
+              </button>
+            </div>
+          </div>
+          {/* Ten */}
+          <div style={{display: activeTicket === "CTen" ? "block" : "none", backgroundColor: '#FFFFFF', borderRadius: '8px', width: '358px', height: '113px', border: '5px solid #ffffff'}} id='CTwo'>
+            <div style={{textAlign: 'center', gap: '5px'}}>
+              <h3 style={{}}>
+                {t['#1010'].title}
+              </h3>
+              <button style={{ backgroundColor: '#02A53B', width: '326px', height: '43px', border: '0px', color: 'white'}}>
+                Complete
+              </button>
+            </div>
+          </div>
+          <div>
           <h1 style={{fontSize: '24px', fontWeight: '2px', color: '#34485A'}}>
             Completed Tasks
           </h1>
+          <div style={{ width: '358px', height: '62px', backgroundColor: '#E0E7FF', fontSize: '18px', color: '#001931', display: 'flex', justifyContent: 'center', alignItems: 'center', vertical: 'center'}} id='FirstDone'>
+            {t['#0001'].title}
+          </div>
+        </div>
+        </div>
         </div>
       </div>
-    </div>
   );
 };
 
 export default Tickets;
 
-// again 😭 
-  
-
-
-
-
-
+// again 😭
