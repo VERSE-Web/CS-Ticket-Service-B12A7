@@ -1,6 +1,6 @@
 import math
 
-NOS = []  # starting seed
+NOS = []
 
 def LIE_O_H_KL():
     global NOS

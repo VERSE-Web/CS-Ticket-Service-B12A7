@@ -16,6 +16,7 @@ const Tickets = ({ ticketsPromise }) => {
   const [activeTicket, setActiveTicket] = useState();
 
 
+
   const showOne = () => {{setActiveTicket("COne"), setInProgress(inProgress +1)}};
   const showTwo = () => {setActiveTicket("CTwo"), setInProgress(inProgress + 1)};
   const showThree = () => {setActiveTicket("CThree"), setInProgress(inProgress + 1)};
@@ -26,6 +27,18 @@ const Tickets = ({ ticketsPromise }) => {
   const showEight = () => {setActiveTicket("CEight"), setInProgress(inProgress + 1)};
   const showNine = () => {setActiveTicket("CNine"), setInProgress(inProgress + 1)};
   const showTen = () => {setActiveTicket("CTen"), setInProgress(inProgress + 1)};
+
+  // Oh Allah, Please fogive me.
+  const [completeOne, setCompletedOne] = useState()
+  const [completeTwo, setCompletedTwo] = useState()
+
+  // Funtions for complete
+  const completeNoOne = () => {
+    setCompletedOne(true)
+    setCompleted(+1)
+    setInProgress(0)
+    {setActiveTicket("")}
+  };
 
   return (
     <div>
@@ -290,8 +303,8 @@ const Tickets = ({ ticketsPromise }) => {
               <h3 style={{}}>
                 {t['#0001'].title}
               </h3>
-              <button style={{ backgroundColor: '#02A53B', width: '326px', height: '43px', border: '0px', color: 'white'}}>
-                Complete
+                <button style={{ backgroundColor: '#02A53B', width: '326px', height: '43px', border: '0px', color: 'white'}}  onClick={completeNoOne}>
+                  Complete
               </button>
             </div>
           </div>
@@ -399,8 +412,10 @@ const Tickets = ({ ticketsPromise }) => {
           <h1 style={{fontSize: '24px', fontWeight: '2px', color: '#34485A'}}>
             Completed Tasks
           </h1>
-          <div style={{ width: '358px', height: '62px', backgroundColor: '#E0E7FF', fontSize: '18px', color: '#001931', display: 'flex', justifyContent: 'center', alignItems: 'center', vertical: 'center'}} id='FirstDone'>
-            {t['#0001'].title}
+          <div style={{display: completeOne ? 'block' : 'none'}}>
+            <div style={{ width: '358px', height: '62px', backgroundColor: '#E0E7FF', fontSize: '18px', color: '#001931', display: 'flex', justifyContent: 'center', alignItems: 'center', vertical: 'center'}} id='FirstDone'>
+              {t['#0001'].title}
+            </div>
           </div>
         </div>
         </div>
