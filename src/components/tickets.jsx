@@ -31,6 +31,14 @@ const Tickets = ({ ticketsPromise }) => {
   // Oh Allah, Please fogive me.
   const [completeOne, setCompletedOne] = useState()
   const [completeTwo, setCompletedTwo] = useState()
+  const [completeThree, setCompletedThree] = useState()
+  const [completeFour, setCompletedFour] = useState()
+  const [completeFive, setCompletedFive] = useState()
+  const [completeSix, setCompletedSix] = useState(false);
+  const [completeSeven, setCompletedSeven] = useState(false);
+  const [completeEight, setCompletedEight] = useState(false);
+  const [completeNine, setCompletedNine] = useState(false);
+  const [completeTen, setCompletedTen] = useState(false);
 
   // Funtions for complete
   const completeNoOne = () => {
@@ -38,6 +46,68 @@ const Tickets = ({ ticketsPromise }) => {
     setCompleted(+1)
     setInProgress(0)
     {setActiveTicket("")}
+  };
+  const completeNoTwo = () => {
+    setCompletedTwo(true);
+    setCompleted(prev => prev + 1);
+    setInProgress(0);
+    setActiveTicket("");
+  };
+
+  const completeNoThree = () => {
+    setCompletedThree(true);
+    setCompleted(prev => prev + 1);
+    setInProgress(0);
+    setActiveTicket("");
+  };
+
+  const completeNoFour = () => {
+    setCompletedFour(true);
+    setCompleted(prev => prev + 1);
+    setInProgress(0);
+    setActiveTicket("");
+  };
+
+  const completeNoFive = () => {
+    setCompletedFive(true);
+    setCompleted(prev => prev + 1);
+    setInProgress(0);
+    setActiveTicket("");
+  };
+
+  const completeNoSix = () => {
+    setCompletedSix(true);
+    setCompleted(prev => prev + 1);
+    setInProgress(0);
+    setActiveTicket("");
+  };
+
+  const completeNoSeven = () => {
+    setCompletedSeven(true);
+    setCompleted(prev => prev + 1);
+    setInProgress(0);
+    setActiveTicket("");
+  };
+
+  const completeNoEight = () => {
+    setCompletedEight(true);
+    setCompleted(prev => prev + 1);
+    setInProgress(0);
+    setActiveTicket("");
+  };
+
+  const completeNoNine = () => {
+    setCompletedNine(true);
+    setCompleted(prev => prev + 1);
+    setInProgress(0);
+    setActiveTicket("");
+  };
+
+  const completeNoTen = () => {
+    setCompletedTen(true);
+    setCompleted(prev => prev + 1);
+    setInProgress(0);
+    setActiveTicket("");
   };
 
   return (
@@ -314,7 +384,7 @@ const Tickets = ({ ticketsPromise }) => {
               <h3 style={{}}>
                 {t['#0010'].title}
               </h3>
-              <button style={{ backgroundColor: '#02A53B', width: '326px', height: '43px', border: '0px', color: 'white'}}>
+              <button style={{ backgroundColor: '#02A53B', width: '326px', height: '43px', border: '0px', color: 'white'}} onClick={completeNoTwo}>
                 Complete
               </button>
             </div>
@@ -326,8 +396,8 @@ const Tickets = ({ ticketsPromise }) => {
               <h3 style={{}}>
                 {t['#0011'].title}
               </h3>
-              <button style={{ backgroundColor: '#02A53B', width: '326px', height: '43px', border: '0px', color: 'white'}}>
-                Complete
+              <button style={{ backgroundColor: '#02A53B', width: '326px', height: '43px', border: '0px', color: 'white'}} onClick={completeNoThree}>
+               Complete
               </button>
             </div>
           </div>
@@ -337,7 +407,7 @@ const Tickets = ({ ticketsPromise }) => {
               <h3 style={{}}>
                 {t['#0100'].title}
               </h3>
-              <button style={{ backgroundColor: '#02A53B', width: '326px', height: '43px', border: '0px', color: 'white'}}>
+              <button style={{ backgroundColor: '#02A53B', width: '326px', height: '43px', border: '0px', color: 'white'}} onClick={completeNoFour}>
                 Complete
               </button>
             </div>
@@ -348,7 +418,7 @@ const Tickets = ({ ticketsPromise }) => {
               <h3 style={{}}>
                 {t['#0101'].title}
               </h3>
-              <button style={{ backgroundColor: '#02A53B', width: '326px', height: '43px', border: '0px', color: 'white'}}>
+              <button style={{ backgroundColor: '#02A53B', width: '326px', height: '43px', border: '0px', color: 'white'}} onClick={completeNoFive}>
                 Complete
               </button>
             </div>
@@ -359,7 +429,7 @@ const Tickets = ({ ticketsPromise }) => {
               <h3 style={{}}>
                 {t['#0110'].title}
               </h3>
-              <button style={{ backgroundColor: '#02A53B', width: '326px', height: '43px', border: '0px', color: 'white'}}>
+              <button style={{ backgroundColor: '#02A53B', width: '326px', height: '43px', border: '0px', color: 'white'}} onClick={completeNoSix}>
                 Complete
               </button>
             </div>
@@ -370,7 +440,7 @@ const Tickets = ({ ticketsPromise }) => {
               <h3 style={{}}>
                 {t['#0111'].title}
               </h3>
-              <button style={{ backgroundColor: '#02A53B', width: '326px', height: '43px', border: '0px', color: 'white'}}>
+              <button style={{ backgroundColor: '#02A53B', width: '326px', height: '43px', border: '0px', color: 'white'}} onClick={completeNoSeven}>
                 Complete
               </button>
             </div>
@@ -381,7 +451,7 @@ const Tickets = ({ ticketsPromise }) => {
               <h3 style={{}}>
                 {t['#1000'].title}
               </h3>
-              <button style={{ backgroundColor: '#02A53B', width: '326px', height: '43px', border: '0px', color: 'white'}}>
+              <button style={{ backgroundColor: '#02A53B', width: '326px', height: '43px', border: '0px', color: 'white'}} onClick={completeNoEight}>
                 Complete
               </button>
             </div>
@@ -392,7 +462,7 @@ const Tickets = ({ ticketsPromise }) => {
               <h3 style={{}}>
                 {t['#1001'].title}
               </h3>
-              <button style={{ backgroundColor: '#02A53B', width: '326px', height: '43px', border: '0px', color: 'white'}}>
+              <button style={{ backgroundColor: '#02A53B', width: '326px', height: '43px', border: '0px', color: 'white'}} onClick={completeNoNine}>
                 Complete
               </button>
             </div>
@@ -403,7 +473,7 @@ const Tickets = ({ ticketsPromise }) => {
               <h3 style={{}}>
                 {t['#1010'].title}
               </h3>
-              <button style={{ backgroundColor: '#02A53B', width: '326px', height: '43px', border: '0px', color: 'white'}}>
+              <button style={{ backgroundColor: '#02A53B', width: '326px', height: '43px', border: '0px', color: 'white'}} onClick={completeNoTen}>
                 Complete
               </button>
             </div>
@@ -417,6 +487,60 @@ const Tickets = ({ ticketsPromise }) => {
               {t['#0001'].title}
             </div>
           </div>
+          <br/>
+          <div style={{display: completeTwo ? 'block' : 'none'}}>
+            <div style={{ width: '358px', height: '62px', backgroundColor: '#E0E7FF', fontSize: '18px', color: '#001931', display: 'flex', justifyContent: 'center', alignItems: 'center', vertical: 'center'}} id='FirstDone'>
+              {t['#0010'].title}
+            </div>
+          </div>
+          <br/>
+          <div style={{display: completeThree ? 'block' : 'none'}}>
+            <div style={{ width: '358px', height: '62px', backgroundColor: '#E0E7FF', fontSize: '18px', color: '#001931', display: 'flex', justifyContent: 'center', alignItems: 'center', vertical: 'center'}} id='FirstDone'>
+              {t['#0011'].title}
+            </div>
+          </div>
+          <br/>
+          <div style={{display: completeFour ? 'block' : 'none'}}>
+            <div style={{ width: '358px', height: '62px', backgroundColor: '#E0E7FF', fontSize: '18px', color: '#001931', display: 'flex', justifyContent: 'center', alignItems: 'center', vertical: 'center'}} id='FirstDone'>
+              {t['#0100'].title}
+            </div>
+          </div>
+          <br/>
+          <div style={{display: completeFive ? 'block' : 'none'}}>
+            <div style={{ width: '358px', height: '62px', backgroundColor: '#E0E7FF', fontSize: '18px', color: '#001931', display: 'flex', justifyContent: 'center', alignItems: 'center', vertical: 'center'}} id='FirstDone'>
+              {t['#0101'].title}
+            </div>
+          </div>
+          <br/>
+          <div style={{display: completeSix ? 'block' : 'none'}}>
+            <div style={{ width: '358px', height: '62px', backgroundColor: '#E0E7FF', fontSize: '18px', color: '#001931', display: 'flex', justifyContent: 'center', alignItems: 'center', vertical: 'center'}} id='FirstDone'>
+              {t['#0110'].title}
+            </div>
+          </div>
+          <br/>
+          <div style={{display: completeSeven ? 'block' : 'none'}}>
+            <div style={{ width: '358px', height: '62px', backgroundColor: '#E0E7FF', fontSize: '18px', color: '#001931', display: 'flex', justifyContent: 'center', alignItems: 'center', vertical: 'center'}} id='FirstDone'>
+              {t['#0111'].title}
+            </div>
+          </div>
+          <br/>
+          <div style={{display: completeEight ? 'block' : 'none'}}>
+            <div style={{ width: '358px', height: '62px', backgroundColor: '#E0E7FF', fontSize: '18px', color: '#001931', display: 'flex', justifyContent: 'center', alignItems: 'center', vertical: 'center'}} id='FirstDone'>
+              {t['#1000'].title}
+            </div>
+          </div>
+          <br/>
+          <div style={{display: completeNine ? 'block' : 'none'}}>
+            <div style={{ width: '358px', height: '62px', backgroundColor: '#E0E7FF', fontSize: '18px', color: '#001931', display: 'flex', justifyContent: 'center', alignItems: 'center', vertical: 'center'}} id='FirstDone'>
+              {t['#1001'].title}
+            </div>
+          </div>
+          <br/>
+          <div style={{display: completeTen ? 'block' : 'none'}}>
+            <div style={{ width: '358px', height: '62px', backgroundColor: '#E0E7FF', fontSize: '18px', color: '#001931', display: 'flex', justifyContent: 'center', alignItems: 'center', vertical: 'center'}} id='FirstDone'>
+              {t['#1010'].title}
+            </div>
+          </div>
         </div>
         </div>
         </div>
@@ -426,4 +550,4 @@ const Tickets = ({ ticketsPromise }) => {
 
 export default Tickets;
 
-// again 😭
+// And incase i don't see ya Good morning, Good Afternoon and good night.
